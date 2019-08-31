@@ -2,7 +2,6 @@ import requests
 import json
 import mysql.connector
 
-
 def get_data():
 
     user = 'user@boardmaps.com' + '/token'
@@ -34,8 +33,7 @@ def get_data():
     
     result_data = tuple(list_data[i : i+9] for i in range(0, len(list_data), 9))
     
-    return result_data
-        
+    return result_data        
         
 def db_update_organizations(data):
 
@@ -68,31 +66,10 @@ def db_update_organizations(data):
     cursor.close()
     connection.close()
     
-def get_query():
-
-    connection = mysql.connector.connect(
-        host = 'localhost',
-        port = '3306',
-        database = 'clientinfo',
-        user = 'root',
-        password = 'root'
-    )
-
-    cursor = connection.cursor()
-    if not connection.is_connected():
-        print("No connection")
-    
-    query = """ SELECT id, name, current_version, zendesk_id FROM organizations """
-
-    cursor.execute(query)
-    result = cursor.fetchall()
-    print(result)
-
 
 def main():    
     data = get_data()     
-    db_update_organizations(data)
-    #get_query()    
+    db_update_organizations(data)      
 
 if __name__ == "__main__":
     main()
