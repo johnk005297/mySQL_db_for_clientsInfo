@@ -2,8 +2,6 @@ import json
 import mysql.connector
 import requests
 
-
-
 def get_organization_data():
     
     user = 'user@boardmaps.com' + '/token'
@@ -50,7 +48,6 @@ def insert_dataInto_db():
         database='clientinfo',
         user='root',
         password='root' )
-
         
     db_query = mydb.cursor()
     if not mydb.is_connected():
@@ -66,8 +63,7 @@ def insert_dataInto_db():
     print(db_query.rowcount, "record(s) affected")
        
     db_query.close()
-    mydb.close()
-    
+    mydb.close()    
 
 def main():
     get_organization_data()
