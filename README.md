@@ -1,2 +1,2 @@
 # mySQL_db_for_clientsInfo
-Store information about clients centralized in db
+Option to store information about clients centralized in db without excel files or smth like that.
