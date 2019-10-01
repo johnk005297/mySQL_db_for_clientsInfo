@@ -6,12 +6,12 @@ import time
 
 class zendesk:    
        
-    user = 'ikutuzov@boardmaps.com' + '/token'
-    pwd = 'PwWDWXQYQvTKglDHagRF12fOkrZGMtPkWO0MXyQ4'
+    user = 'login@domen' + '/token'
+    pwd = 'token'
     headers = {'content-type': 'application/json'}    
 
-    organizationsUrl = "https://boardmaps.zendesk.com/api/v2/organizations.json"
-    ticketsUrl = "https://boardmaps.zendesk.com/api/v2/tickets.json"
+    organizationsUrl = "https://company.zendesk.com/api/v2/organizations.json"
+    ticketsUrl = "https://company.zendesk.com/api/v2/tickets.json"
     
 
     def getDataForOrganizations(self):
