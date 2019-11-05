@@ -4,7 +4,7 @@ import requests
 
 def get_organization_data():
     
-    user = 'user@boardmaps.com' + '/token'
+    user = 'user@company.com' + '/token'
     pwd = '<token>'
     headers = {'content-type': 'application/json'}
 
