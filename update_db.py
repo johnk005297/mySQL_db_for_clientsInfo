@@ -4,7 +4,7 @@ import mysql.connector
 
 def get_data():
 
-    user = 'user@boardmaps.com' + '/token'
+    user = 'user@company.com' + '/token'
     pwd = '<token>'
     headers = {'content-type': 'application/json'}
 
