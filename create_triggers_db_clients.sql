@@ -44,6 +44,3 @@ if old.current_version != new.current_version then
 
 end if;
 end;
-
-drop trigger if exists organizations_history_update;
-truncate table organizations_history;
