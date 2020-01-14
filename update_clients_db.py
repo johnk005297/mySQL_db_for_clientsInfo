@@ -53,23 +53,7 @@ class zendesk:
         cursor = db_connection.cursor()
 
         if not db_connection.is_connected():
-            print("No connection")  
-        
-            ### SIMPLE UPDATE ###
-
-        # count = 0    
-        # for line in data:
-
-        #     query = """ UPDATE organizations SET name = %s, current_version = %s, status = %s, saas = %s, db_maintenance_plan = %s, custom_localization = %s, 
-        #                 custom_skin_for_ipad = %s, custom_server_version = %s 
-        #                 WHERE zendesk_id = %s """
-        
-        #     cursor.execute(query, line)    
-        #     db_connection.commit()    
-        #     if cursor.rowcount == 1:
-        #         count += 1
-        # print()
-        # print(str(count) + " record(s) affected on update")
+            print("No connection")             
 
         ### ON DUPLICATE KEY VERSION ###
 
@@ -116,8 +100,7 @@ class zendesk:
                 dataTickets.append(line["created_at"][:10])                                               
                 dataTickets.append(line["updated_at"][:10])                
                 dataTickets.append(line["fields"][3]["value"]) # TFS links            
-                dataTickets.append(line["fields"][2]["value"]) # reason
-                # dataTickets.append(line["tags"])
+                dataTickets.append(line["fields"][2]["value"]) # reason                
                 dataTickets.append(line["organization_id"])
                 dataTickets.append(line["requester_id"])           
                 dataTickets.append(line['assignee_id'])
